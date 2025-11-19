@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RunVSAgent Eclipse Plugin (Neo)
+Bundle-SymbolicName: com.sina.weibo.agent.eclipse.neo;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.sina.weibo.agent.eclipse.neo.Activator
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.swt
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-Vendor: WeCode-AI
+Automatic-Module-Name: com.sina.weibo.agent.eclipse.neo
