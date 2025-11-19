@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Weibo Agent Eclipse Plugin
+Bundle-SymbolicName: com.sina.weibo.agent.eclipse;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.sina.weibo.agent.eclipse.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.jetbrains.kotlin.stdlib
+Bundle-ActivationPolicy: lazy
