@@ -2,22 +2,17 @@ package com.sina.weibo.agent.eclipse
 
 import org.osgi.framework.BundleActivator
 import org.osgi.framework.BundleContext
-import com.sina.weibo.agent.extensions.ui.contextmenu.DynamicContextMenuManager
+import org.eclipse.core.runtime.Platform
 
 class Activator : BundleActivator {
 
     override fun start(context: BundleContext) {
-        INSTANCE = this
-        DynamicContextMenuManager.getInstance().initialize()
+        val bundle = Platform.getBundle("com.sina.weibo.agent.eclipse")
+        val logger = Platform.getLog(bundle)
+        logger.info("Weibo Agent Eclipse Plugin started.")
     }
 
     override fun stop(context: BundleContext) {
-        DynamicContextMenuManager.getInstance().dispose()
-        INSTANCE = null
-    }
-
-    companion object {
-        var INSTANCE: Activator? = null
-            private set
+        // No action needed on stop for this minimal implementation.
     }
 }
