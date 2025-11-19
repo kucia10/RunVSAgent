@@ -1,1 +1,1 @@
-rootProject.name = "com.sina.weibo.agent.eclipse"
+rootProject.name = "eclipse_plugin_new"
