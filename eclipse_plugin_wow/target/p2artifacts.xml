@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200157'>
+  <artifact classifier='osgi.bundle' id='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200231'>
     <properties size='9'>
-      <property name='artifact.size' value='1601947'/>
-      <property name='download.size' value='1601947'/>
-      <property name='download.checksum.sha-512' value='fd25a68b4f1d9510d663caee13e8af6d4147b7dead260629c75edc6f91921ffa4d0e8fe1547ca0bc825e4ee1baf014d8a4316e921458b6f9f951eef4e2515180'/>
-      <property name='download.checksum.sha-1' value='5c65edee108cb9c46bbdd8b463b11159b217b94d'/>
-      <property name='download.checksum.sha-256' value='34e064276c0356b787436b5dd5d3b1172e54596a0517fdb5d16977d7cc41e0f4'/>
+      <property name='artifact.size' value='1704014'/>
+      <property name='download.size' value='1704014'/>
+      <property name='download.checksum.sha-512' value='fa722f65c212a4b4253c5da3d5541669c8bdefef6ab9a3e38b26f7e6434fe52848d30bda96f2190167e6ee21a2ac9ab125655451adb44730b7fe118169a7e1a6'/>
+      <property name='download.checksum.sha-1' value='855d912a7656ca62817baa0406b40e68db80bcda'/>
+      <property name='download.checksum.sha-256' value='88908f881c42f86fe1fdb558161de8a1e72453184a69e615ec5559c7f772a840'/>
       <property name='maven-groupId' value='com.sina.weibo.agent.eclipse.wow'/>
       <property name='maven-artifactId' value='com.sina.weibo.agent.eclipse.wow'/>
       <property name='maven-version' value='1.0.0-SNAPSHOT'/>

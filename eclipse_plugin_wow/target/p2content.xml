@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200157' generation='2'>
-    <update id='com.sina.weibo.agent.eclipse.wow' range='[0.0.0,1.0.0.202511200157)' severity='0'/>
+  <unit id='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200231' generation='2'>
+    <update id='com.sina.weibo.agent.eclipse.wow' range='[0.0.0,1.0.0.202511200231)' severity='0'/>
     <properties size='6'>
       <property name='org.eclipse.equinox.p2.name' value='RunVSAgent-wow'/>
       <property name='org.eclipse.equinox.p2.provider' value='WeCode-AI'/>
@@ -11,9 +11,9 @@
       <property name='maven-type' value='eclipse-plugin'/>
     </properties>
     <provides size='4'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200157'/>
-      <provided namespace='osgi.bundle' name='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200157'/>
-      <provided namespace='osgi.identity' name='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200157'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200231'/>
+      <provided namespace='osgi.bundle' name='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200231'/>
+      <provided namespace='osgi.identity' name='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200231'>
         <properties size='1'>
           <property name='type' value='osgi.bundle'/>
         </properties>
@@ -28,20 +28,20 @@
           com.sina.weibo.agent.eclipse.wow
         </description>
       </requiredProperties>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.sina.weibo.agent.eclipse.wow.source' range='[1.0.0.202511200157,1.0.0.202511200157]' optional='true'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.sina.weibo.agent.eclipse.wow.source' range='[1.0.0.202511200231,1.0.0.202511200231]' optional='true'>
         <filter>
           (org.eclipse.update.install.sources=true)
         </filter>
       </required>
     </requires>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200157'/>
+      <artifact classifier='osgi.bundle' id='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200231'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='manifest'>
-          Bundle-SymbolicName: com.sina.weibo.agent.eclipse.wow;singleton:=true&#xA;Bundle-Version: 1.0.0.202511200157&#xA;
+          Bundle-SymbolicName: com.sina.weibo.agent.eclipse.wow;singleton:=true&#xA;Bundle-Version: 1.0.0.202511200231&#xA;
         </instruction>
       </instructions>
     </touchpointData>

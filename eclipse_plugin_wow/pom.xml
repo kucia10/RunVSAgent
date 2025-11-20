@@ -28,6 +28,11 @@
       <artifactId>kotlin-stdlib</artifactId>
       <version>${kotlin.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlinx</groupId>
+      <artifactId>kotlinx-coroutines-core</artifactId>
+      <version>1.7.3</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -79,7 +84,7 @@
             </goals>
             <configuration>
               <outputDirectory>${project.basedir}/lib</outputDirectory>
-              <includeArtifactIds>kotlin-stdlib</includeArtifactIds>
+              <includeArtifactIds>kotlin-stdlib,kotlinx-coroutines-core</includeArtifactIds>
             </configuration>
           </execution>
         </executions>

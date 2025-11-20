@@ -2,10 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: RunVSAgent-wow
 Bundle-SymbolicName: com.sina.weibo.agent.eclipse.wow;singleton:=true
-Bundle-Version: 1.0.0.202511200157
+Bundle-Version: 1.0.0.202511200231
 Bundle-Activator: com.sina.weibo.agent.eclipse.wow.plugin.Activator
 Bundle-Vendor: WeCode-AI
 Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: .,lib/kotlin-stdlib-1.9.22.jar
+Bundle-ClassPath: .,lib/kotlin-stdlib-1.9.22.jar,lib/kotlinx-coroutines-
+ core-jvm-1.7.3.jar
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=17))"
