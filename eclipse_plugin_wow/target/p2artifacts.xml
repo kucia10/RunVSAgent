@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='com.sina.weibo.agent.eclipse.wow' version='1.0.0.202511200157'>
+    <properties size='9'>
+      <property name='artifact.size' value='1601947'/>
+      <property name='download.size' value='1601947'/>
+      <property name='download.checksum.sha-512' value='fd25a68b4f1d9510d663caee13e8af6d4147b7dead260629c75edc6f91921ffa4d0e8fe1547ca0bc825e4ee1baf014d8a4316e921458b6f9f951eef4e2515180'/>
+      <property name='download.checksum.sha-1' value='5c65edee108cb9c46bbdd8b463b11159b217b94d'/>
+      <property name='download.checksum.sha-256' value='34e064276c0356b787436b5dd5d3b1172e54596a0517fdb5d16977d7cc41e0f4'/>
+      <property name='maven-groupId' value='com.sina.weibo.agent.eclipse.wow'/>
+      <property name='maven-artifactId' value='com.sina.weibo.agent.eclipse.wow'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-type' value='eclipse-plugin'/>
+    </properties>
+  </artifact>
+</artifacts>
