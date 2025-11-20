@@ -3,8 +3,8 @@ package com.sina.weibo.agent.eclipse.wow.plugin
 import com.sina.weibo.agent.eclipse.wow.core.ExtensionProcessManager
 import com.sina.weibo.agent.eclipse.wow.core.ExtensionSocketServer
 import com.sina.weibo.agent.eclipse.wow.core.ExtensionUnixDomainSocketServer
-import com.sina.weibo.agent.eclipse.wow.core.ISocketServer
 import com.sina.weibo.agent.eclipse.wow.editor.EditorListener
+import com.sina.weibo.agent.eclipse.wow.ui.RunVSAgentViewPart
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -39,6 +39,18 @@ class Startup : IStartup {
         // Initialize and start the plugin service
         val pluginService = WecoderPluginService.getInstance()
         pluginService.initialize()
+
+        // Switch to the browser view after initialization
+        pluginService.waitForInitialization().thenAccept {
+            if (it) {
+                PlatformUI.getWorkbench().display.asyncExec {
+                    val view = PlatformUI.getWorkbench().activeWorkbenchWindow.activePage.findView("com.sina.weibo.agent.eclipse.wow.ui.RunVSAgentViewPart")
+                    if (view is RunVSAgentViewPart) {
+                        view.showBrowser()
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -80,14 +92,13 @@ class WecoderPluginService {
                 // In a real scenario, we would get the project path from the workspace
                 val projectPath = ""
 
-                val server: ISocketServer = if (System.getProperty("os.name").lowercase().contains("win")) {
-                    socketServer
+                val portOrPath: Any? = if (System.getProperty("os.name").lowercase().contains("win")) {
+                    socketServer.start(projectPath)
                 } else {
-                    udsSocketServer
+                    udsSocketServer.start(projectPath)
                 }
 
-                val portOrPath = server.start(projectPath)
-                if (portOrPath.isBlank()) {
+                if (portOrPath == null || (portOrPath is Int && portOrPath == -1)) {
                     LOG.error("Failed to start socket server")
                     initializationComplete.complete(false)
                     return@launch
@@ -97,7 +108,11 @@ class WecoderPluginService {
 
                 if (!processManager.start(portOrPath)) {
                     LOG.error("Failed to start extension process")
-                    server.stop()
+                    if (System.getProperty("os.name").lowercase().contains("win")) {
+                        socketServer.stop()
+                    } else {
+                        udsSocketServer.stop()
+                    }
                     initializationComplete.complete(false)
                     return@launch
                 }
@@ -112,6 +127,10 @@ class WecoderPluginService {
                 initializationComplete.complete(false)
             }
         }
+    }
+
+    fun waitForInitialization(): CompletableFuture<Boolean> {
+        return initializationComplete
     }
 
     private fun cleanup() {

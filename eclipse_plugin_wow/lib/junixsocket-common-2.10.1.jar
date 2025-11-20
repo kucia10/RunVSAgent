@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script type="text/javascript" src="/js/script.min.js"></script>
+    <script type="text/javascript" src='/js/jar-download.js'></script>
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <!--******************************** JAVASCRIPT ********************************-->
+    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <!--<script src="/js/bootstrap.min.js"></script>-->
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.js"></script>-->
+    <!--******************************** JAVASCRIPT ********************************-->
+
+    <!--******************************** CSS ********************************-->
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.css"/>-->
+    <!--<link rel="stylesheet" href="/css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/hexdots.css" type="text/css">-->
+    <!--<link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">-->
+    <!--******************************** CSS ********************************-->
+
+    <link rel="stylesheet" href="/css/custom.css" type="text/css">
+
+        <title></title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/png"/>
+    <link rel="icon" href="/favicon.png" type="image/png"/>
+    <meta name="norton-safeweb-site-verification"
+          content="qhu2ops3xj2dtafrbj0lm1ue5n9j06cub8a-jgzjomb9jag51hiq3p6m-b0mxxg9wjlquqn6lxbmcsjr-fz8d2c4yqvz9whjrvizwrdtaun6b-pf8tofxocimwiyoa2w"/>
+    <meta name="description" content="Search and download Java libraries/JAR files inclusive their dependencies. ➤ No Maven installation ➤ Everything online ➤ Free download" />    <meta name="keywords" content=""/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+
+        <!--AUTOMATIC ADS-->
+       <!-- <script data-ad-client="ca-pub-2674781534041368" async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64f81bb4dc72050019fd5e5b&product=sticky-share-buttons&source=platform" async="async"></script>
+</head>
+<body>
+<div class="top-bar">All Downloads are FREE. Search and download functionalities are using the official Maven repository.</div>
+<div class="content">
+        <main>
+        <div class="top-area">
+            <a class="no-hover-effect logo-link" href='/'><img src="/logo.png" id="logo" alt="JAR search and dependency download from the Maven repository"></a>
+                        <div class="dropdown form-inline authorization-items">
+                                <li class="nav-item" auth-allow="" style="display: list-item;">
+                        <a class="nav-link" href="/login.php"><i class="fa fa-sign-in"></i> Log In</a>
+                    </li>
+                    <li class="nav-item" auth-allow="" style="display: list-item;">
+                        <a class="nav-link" href="/register.php"><i class="fa fa-user-plus"></i> Register</a>
+                    </li>
+
+
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/"><i class="fa fa-search"></i>JAR search</a></li>
+                        <li><a href="/maven-repository-class-search.php"><i class="fa fa-file-code-o" aria-hidden="true"></i>Class search</a></li>
+                        <li><a href="/online-maven-download-tool.php"><i class="fa fa-download"></i>Maven online tool</a></li>
+                        <li><a href="/maven-dependency-from-remote-repository.php"><i class="fa fa-wrench"></i>Custom repository</a></li>
+                        <li><a href="/online-pom-generator.php"><i class="fa fa-cogs" aria-hidden="true"></i>POM generator</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i
+                                        class="fa fa-info"></i>Info<span
+                                        class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/jar-catalog.php">JAR Catalog</a></li>
+                                <li><a href="/top-java-libraries-jar.php">Top libraries</a></li>
+                                <li><a href="/add-jar-with-dependencies-in-eclipse.php">Eclipse</a></li>
+                                <li><a href="/faq.php">FAQs</a></li>
+                                <li><a target="_blank" href="https://php-download.com"><i class="fa fa-external-link" aria-hidden="true"></i> PHP Download</a></li>
+                                <li><a target="_blank" href="https://osourced.is"><i class="fa fa-external-link" aria-hidden="true"></i> German speaking virtual assistants</a></li>
+                            </ul>
+                        </li>
+                        <li class="my-project-btn"><a href='/dependency-project.php'><i class='fa fa-puzzle-piece'></i> My project</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+                        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-64092528-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+        <div id="download-process-dialog" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i style="font-size: 15px;" class="fa fa-spinner fa-spin fa-3x fa-fw"></i> Please wait. This can take some minutes ...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="project-payment-dialog" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title align-center">Project download</h4>
+                    </div>
+                    <div class="modal-body align-center">
+                        <strong>Many resources are needed to download a project. Please understand that we have to compensate our server costs. Thank you in advance.</strong>
+                        <br/>
+                        <span class="project-price">Project price only 1 $</span>
+                        <p>
+                            You can buy this project and download/modify it how often you want.
+                        </p>
+                        <br/>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="item_number" value=""/>
+                            <input type="hidden" name="hosted_button_id" value="CL9BCSWWEZSXW">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                   alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="common-dialog" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Information</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="dialog-content">
+
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="common-dialog-ok-btn" type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-check" aria-hidden="true"></i> OK</button>
+                    </div>
+                </div>
+            </div>
+        </div><div class='col-md-7 empty-message col-md-offset-2'>Sorry, there is no result for this search query. Please go to our <a title='Maven online download tool' href='/online-maven-download-tool.php'>Maven Online Download Tool</a> to download JAR files by the dependencies XML.</div><div class='clear'></div>
+<!--
+    <aside class="related-items">
+        <section>
+            <div class="panel panel-primary">
+                <div class="panel-heading margin-bottom">Related Artifacts</div>
+                <div class="">
+                                    </div>
+            </div>
+        </section>
+        <section>
+            <div class="panel panel-primary">
+                <div class="panel-heading margin-bottom">Related Groups</div>
+                <div class="">
+                                    </div>
+            </div>
+        </section>
+    </aside>
+    <div class='clear'></div>
+--></main>
+</div>
+<br/><br/>
+    <div class="align-center">&copy; 2015 - 2025 <a href="/legal-notice.php">Weber Informatics LLC</a>&nbsp;|&nbsp;<a href="/data-protection.php">Privacy Policy</a></div>
+<br/><br/><br/><br/><br/><br/>
+</body>
+</html>

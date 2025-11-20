@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: RunVSAgent-wow
 Bundle-SymbolicName: com.sina.weibo.agent.eclipse.wow;singleton:=true
-Bundle-Version: 1.0.0.202511200231
+Bundle-Version: 1.0.0.202511200408
 Bundle-Activator: com.sina.weibo.agent.eclipse.wow.plugin.Activator
 Bundle-Vendor: WeCode-AI
 Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
