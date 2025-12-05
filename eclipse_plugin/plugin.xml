@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+SPDX-FileCopyrightText: 2025 Weibo, Inc.
+SPDX-License-Identifier: Apache-2.0
+-->
+<plugin>
+   <!-- View Extension -->
+   <extension point="org.eclipse.ui.views">
+      <category
+            id="com.sina.weibo.agent.eclipse.category"
+            name="RunVSAgent">
+      </category>
+      <view
+            id="com.sina.weibo.agent.eclipse.views.RunVSAgentView"
+            name="RunVSAgent"
+            icon="icons/runvsagent-16.png"
+            category="com.sina.weibo.agent.eclipse.category"
+            class="com.sina.weibo.agent.eclipse.ui.views.RunVSAgentView"
+            allowMultiple="false"
+            restorable="true">
+      </view>
+   </extension>
+
+   <!-- Perspective Extension - Add view to all perspectives -->
+   <extension point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="*">
+         <view
+               id="com.sina.weibo.agent.eclipse.views.RunVSAgentView"
+               relative="org.eclipse.ui.views.ContentOutline"
+               relationship="stack"
+               visible="false">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+   <!-- Startup Extension - Early startup for plugin initialization -->
+   <extension point="org.eclipse.ui.startup">
+      <startup class="com.sina.weibo.agent.eclipse.StartupHandler"/>
+   </extension>
+
+   <!-- Commands Extension -->
+   <extension point="org.eclipse.ui.commands">
+      <category
+            id="com.sina.weibo.agent.eclipse.commands.category"
+            name="RunVSAgent Commands">
+      </category>
+      <command
+            id="com.sina.weibo.agent.eclipse.commands.openView"
+            name="Open RunVSAgent"
+            categoryId="com.sina.weibo.agent.eclipse.commands.category"
+            description="Open the RunVSAgent view">
+      </command>
+      <command
+            id="com.sina.weibo.agent.eclipse.commands.switchExtension"
+            name="Switch Extension Provider"
+            categoryId="com.sina.weibo.agent.eclipse.commands.category"
+            description="Switch to a different extension provider">
+      </command>
+      <command
+            id="com.sina.weibo.agent.eclipse.commands.checkStatus"
+            name="Check Extension Status"
+            categoryId="com.sina.weibo.agent.eclipse.commands.category"
+            description="Check extension status and diagnose issues">
+      </command>
+   </extension>
+
+   <!-- Handlers Extension -->
+   <extension point="org.eclipse.ui.handlers">
+      <handler
+            commandId="com.sina.weibo.agent.eclipse.commands.openView"
+            class="com.sina.weibo.agent.eclipse.handlers.OpenViewHandler">
+      </handler>
+      <handler
+            commandId="com.sina.weibo.agent.eclipse.commands.switchExtension"
+            class="com.sina.weibo.agent.eclipse.handlers.SwitchExtensionHandler">
+      </handler>
+      <handler
+            commandId="com.sina.weibo.agent.eclipse.commands.checkStatus"
+            class="com.sina.weibo.agent.eclipse.handlers.CheckStatusHandler">
+      </handler>
+   </extension>
+
+   <!-- Menu Contributions -->
+   <extension point="org.eclipse.ui.menus">
+      <!-- Main Menu -->
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="com.sina.weibo.agent.eclipse.menus.main"
+               label="RunVSAgent"
+               mnemonic="R">
+            <command
+                  commandId="com.sina.weibo.agent.eclipse.commands.openView"
+                  mnemonic="O"
+                  style="push">
+            </command>
+            <separator name="com.sina.weibo.agent.eclipse.separator1" visible="true"/>
+            <command
+                  commandId="com.sina.weibo.agent.eclipse.commands.switchExtension"
+                  mnemonic="S"
+                  style="push">
+            </command>
+            <command
+                  commandId="com.sina.weibo.agent.eclipse.commands.checkStatus"
+                  mnemonic="C"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+
+      <!-- Toolbar Contribution for the View -->
+      <menuContribution
+            locationURI="toolbar:com.sina.weibo.agent.eclipse.views.RunVSAgentView">
+         <command
+               commandId="com.sina.weibo.agent.eclipse.commands.switchExtension"
+               icon="icons/refresh-16.png"
+               style="push"
+               tooltip="Switch Extension Provider">
+         </command>
+         <command
+               commandId="com.sina.weibo.agent.eclipse.commands.checkStatus"
+               icon="icons/status-16.png"
+               style="push"
+               tooltip="Check Extension Status">
+         </command>
+      </menuContribution>
+
+      <!-- Context Menu for Editors -->
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               id="com.sina.weibo.agent.eclipse.menus.popup"
+               label="RunVSAgent"
+               icon="icons/runvsagent-16.png">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeEditorId">
+                  <not>
+                     <equals value=""/>
+                  </not>
+               </with>
+            </visibleWhen>
+            <command
+                  commandId="com.sina.weibo.agent.eclipse.commands.openView"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+   <!-- Key Bindings -->
+   <extension point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.sina.weibo.agent.eclipse.commands.openView"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+R">
+      </key>
+      <key
+            commandId="com.sina.weibo.agent.eclipse.commands.switchExtension"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+S">
+      </key>
+   </extension>
+
+   <!-- Preferences Extension -->
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+            id="com.sina.weibo.agent.eclipse.preferences.main"
+            name="RunVSAgent"
+            class="com.sina.weibo.agent.eclipse.preferences.RunVSAgentPreferencePage">
+      </page>
+   </extension>
+
+   <!-- Preference Initializer -->
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer class="com.sina.weibo.agent.eclipse.preferences.PreferenceInitializer"/>
+   </extension>
+</plugin>
