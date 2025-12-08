@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.sina.weibo.agent.feature"
+      label="RunVSAgent Eclipse Plugin"
+      version="0.2.5.qualifier"
+      provider-name="Sina Weibo">
+
+   <description url="https://github.com/kucia10/RunVSAgent">
+      RunVSAgent Eclipse Plugin - VSCode Extension Integration for Eclipse
+   </description>
+
+   <copyright>
+      Copyright 2009-2025 Weibo, Inc.
+   </copyright>
+
+   <license url="https://www.apache.org/licenses/LICENSE-2.0">
+      Apache License 2.0
+   </license>
+
+   <plugin
+         id="com.sina.weibo.agent.plugin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
