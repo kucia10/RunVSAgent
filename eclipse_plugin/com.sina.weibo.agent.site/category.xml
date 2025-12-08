@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.sina.weibo.agent.feature_0.2.5.qualifier.jar" id="com.sina.weibo.agent.feature" version="0.2.5.qualifier">
+      <category name="runvsagent"/>
+   </feature>
+   <category-def name="runvsagent" label="RunVSAgent">
+      <description>
+         RunVSAgent Eclipse Plugin - VSCode Extension Integration for Eclipse
+      </description>
+   </category-def>
+</site>
